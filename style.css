@@ -410,12 +410,12 @@ footer{
 
 footer h3{
   text-align: center;
-  padding: 0.5em 1em;
+  padding: 3em 0.5em 0.5em 0.5em;
 }
 
 footer p{
   line-height: 1.5rem;
-  padding: 0.5em 2em;
+  padding: 1em 2em;
   width: 100%;
 }
 
