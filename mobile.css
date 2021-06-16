@@ -4,12 +4,21 @@
     overflow-x: hidden;
   }
 
-  nav{
-    position: relative;
-    height: 130px;
-    padding: 0;
+  /* test */
+
+  main{
+    background-color: red;
+  z-index: 2000;
   }
 
+  nav{
+    position: relative;
+    height: 100%;
+  }
+
+  nav img{
+    padding: 0 1em;
+  }
   nav .humburger{
     position: fixed;
     right: 40px;
@@ -69,7 +78,7 @@
   }
 
   nav .nav-bar{
-   position: absolute;
+   position: fixed;
    left: 0;
    top: 0;
    display: flex;
@@ -82,7 +91,21 @@
   }
 
   nav .nav-bar.show{
-    transform: translateY(45%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: translateY(10%);
+    height: 100%;
+    overflow: auto;
+  }
+
+  nav .nav-bar div{
+    margin-top: 1em;
+  }
+
+  nav .nav-bar p{
+    display: flex;
+    justify-content: space-between;
   }
 
   nav .about ul{
@@ -135,6 +158,10 @@
     margin-top: 0.8em ;
   }
 
+  .collection h2{
+    text-align: center;
+  }
+
   .collection .collection-container{
     display: flex;
     flex-direction: column;
@@ -144,6 +171,29 @@
 
   .collection .collection-container .item{
     display: inline;
-    width: 80%;
+    width: 90%;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer p{
+    text-align: center;
+  }
+
+  footer div ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer div ul li{
+    padding: 0.2em
   }
 }

@@ -36,6 +36,10 @@ nav a {
   color: #fff
 }
 
+nav .nav-bar p{
+  height: 1em;
+}
+
 nav .nav-bar li{
   list-style: none;
 }
@@ -49,6 +53,19 @@ nav .nav-bar{
   display: flex;
   justify-content: space-around;
   transition: all 500ms ease-in-out;
+}
+
+nav .nav-bar i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+nav .nav-bar i:hover{  
+  background-color: rgba(128, 137, 150, 0.1);
 }
 
 /* nav about */
@@ -127,7 +144,7 @@ nav .research-clinic ul.show {
   opacity: 1;
 }
 
-.nav-bar > div{
+nav .nav-bar > div{
   padding: 0.5em 1em;
 }
 
@@ -200,6 +217,7 @@ main .appointment{
 main .appointment .buttons{
   position: relative;
   display: flex;
+  justify-content: space-around;
   gap: 0.5em;
   padding: 2em 3em;
 }
@@ -210,6 +228,11 @@ main .appointment .buttons i{
   left: 0;
   color: blue;
   font-size: 1.5em;
+}
+
+main .appointment .buttons button{
+  width: 25ch;
+  text-align: center;
 }
 
 main .appointment-form{
@@ -314,6 +337,10 @@ main .text {
   color: black;
 }
 
+main .text ul li{
+  padding: 0.2em 1em;
+}
+
 .collection{
   display: flex;
   flex-direction: column;
@@ -324,6 +351,7 @@ main .text {
 
 .collection h2{
   padding: 1em 2em;
+  font-size: clamp(2rem, 4vw, 3rem);
 }
 
 
@@ -340,6 +368,14 @@ main .text {
   margin: 1em;
   border-radius: 5px;
   box-shadow: 0 0 20px rgba(0,0,0,.08);
+}
+
+.collection .collection-container .item p{
+  display: flex;
+}
+
+.collection .collection-container .item p i{
+  padding-right: 0.3em;
 }
 
 .collection .collection-container .item h5{
@@ -378,7 +414,8 @@ footer h3{
 }
 
 footer p{
-  padding: 0.5em 1em;
+  line-height: 1.5rem;
+  padding: 0.5em 2em;
   width: 100%;
 }
 
