@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script src="./index.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <title>Book Your Appointment</title>
+</head>
+
+<body>
+    <header>
+      <nav>
+          <div class="logo">
+            <img src="./assests/qardiyo-logo-white.png" alt="">    
+          </div>
+
+          <div class="nav-bar">
+           
+            <div class="about">
+              <p>About<i class="fas fa-angle-down"></i></p>
+              <ul>
+                <li>Overview</li>
+                <li>Our Approach</li>
+                <li>Our Founders</li>
+                <li>Operations team</li>
+                <li>Research and Development Team</li>
+              </ul>
+            </div>
+
+            <div class="research-clinic">
+              <p>Research and Clinic<i class="fas fa-angle-down"></i></p>
+              <ul>
+                <li>Case Studies</li>
+                <li>Clinic and Diagnostic</li>
+                <li>Research Managerment</li>
+                <li>Clinical Trials</li>
+              </ul>
+            </div>
+
+            <div class="products-services">
+              <p>Produts and Services<i class="fas fa-angle-down"></i></p>
+              <ul>
+                <li>Medical Devices</li>
+                <li>Virtual Care</li>
+                <li>Services</li>
+                <li>Support</li>
+              </ul>
+            </div>
+
+            <div>
+              <a href="#">Artificial intelligence</a>
+            </div>
+            
+            <div>
+              <a href="#">Media insights</a>
+            </div>
+            
+            <div>
+              <a href="#">FAQ</a>
+            </div>
+
+            <div>
+              <a href="#">Book Covid-19 Test Appointment</a>
+            </div>
+
+          </div>
+
+          <div class="humburger">            
+            <div></div>
+          </div>
+      </nav>
+    </header>
+
+      <main>
+        <div class="main-header">
+          <h1>Book Your Appoitment</h1>
+          <button class="btn-secondary">Manage your booking</button>
+        </div>
+      
+        <div class="appointment">
+          
+          <div class="buttons" >
+            <button class="btn-default" onclick="buttonsHandle()" id="pcr"> <i class="fas"></i> PCR Covid-19 Test (Result < 24hrs )</button>
+            <button class="btn-default" onclick="buttonsHandle()" id="expressPcr"> <i class="fas"></i> Express PCR Covid-19 Test  (Result < 4hr)</button>
+            <button class="btn-default" onclick="buttonsHandle()" id="antibodyTest"> <i class="fas"></i> COVID-19 Antibody test (IgG ELISA)</button>
+            <button class="btn-default" onclick="buttonsHandle()" id="rapidNtibodyTest"> <i class="fas"></i> Rapid antibody test (IgG and IgM)</button>
+            <button class="btn-default" onclick="buttonsHandle()" id="comboTest"> <i class="fas"></i> Combo Test = PCR test + Rapid Antibody test (igG/IgM)</button>
+            <button class="btn-default" onclick="buttonsHandle()" id="antigenRapidTest"> <i class="fas"></i> Antigen Rapid Test</button>
+            <button class="btn-default" onclick="buttonsHandle()" id="multipleTest"> <i class="fas"></i> Multiple Test</button>
+          </div>
+
+          <div class="appointment-form">
+
+            <div>
+              <label for="appointment-date">Appointment Data</label>
+              <input type="date" id="appointment-date">
+            </div>
+
+            <div class="person">
+              <label for="person">Person</label>
+              <button id="person">Person: <span>0</span></button>
+                
+              <div class="person-dropdown">
+                <div class="adults">
+                  <p>Adults</p>
+                  <button class="dropdown-btn" onclick="subAdult()">-</button>
+                  <span>0</span>
+                  <button class="dropdown-btn" onclick="addAdult()">+</button>
+                </div>
+
+                <div class="children">
+                  <p>Children</p>
+                  <button class="dropdown-btn" onclick="subChildren()" >-</button>
+                  <span>0</span>
+                  <button class="dropdown-btn" onclick="addChildren()" >+</button>
+                </div>
+              </div>
+            
+              </div>
+
+            <div>
+              <label for="collection">Collection Center</label>
+              <select name="collection" id="collection">
+                <option hidden >Please Select</option>
+                <option value="CardiAI labs">CardiAI labs</option>
+                <option value="Find nextby Collection Center">Find nextby Collection Center</option>
+              </select>
+            </div>
+
+            <div>
+              <button class="btn-primary">Search Now</button>
+            </div>
+          </div>
+
+          <div class="text">
+            <ul>
+              <li>Clients travelling to South East Asia (countries such as China) please request a Nasopharyngeal swab or oropharyngeal swab at the time of collection.</li>
+              <li>For Evenings and Weekends, please contact us at 1(800) 403-8122</li>
+              <li>COVID-19 travel clearance requirements vary by country. Information can be found on your travel destination’s website</li>
+              <li>Your destination may have different requisites relating to duration of test validity . Please make sure you choose your appointment time appropriately</li>
+              <li>Results are typically ready within 24 hrs, once received in the laboratory.</li>
+            </ul>
+          </div>
+
+        </div> 
+        <!--appointment -->
+      </main>
+
+      <!-- Our Collection Centers -->
+      <div class="collection">
+        <h2>Our Collection Centers</h2>
+        
+        <div class="collection-container">
+          <!-- dynamic data -->
+        </div>
+      </div>
+
+      <!-- footer section -->
+      <footer>
+        <h3>DISCLAIMER</h3>
+        <p>As the COVID-19 pandemic evolves, requirements to test continue to evolve. CardiAI will ensure that its assessments meet evolving standards. But it is impossible to predict every possible change, or when it might occur. Health care providers and their patients should be aware of this risk beyond how CardiAI can control. All Provincial regulatory laboratory requirements met. These are Laboratory Developed Tests developed, validated, and used for inhouse pathology and diagnostic purposes. This is intended for use only by the laboratory entity where they are developed, unlike the majority of commercially marketed laboratory tests manufactured by medical device companies and sold to laboratories, hospitals or physicians’ offices in interstate commerce, and must be cleared or approved by the Food and Drug Administration (FDA) through FDA-EUA and Health Canada through Interim Order. Laboratories that develop these “in-house” diagnostic tests, either create the reagents themselves or purchase reagents from outside vendors, and then develop their own proprietary test. These tests will be sold to other laboratories, hospitals, or doctors subject to HC/FDA approval or clearance processes. These tests are pending Regulatory Approvals.</p>
+        
+        <div>
+          <p>
+            © 2020. All right reserved. | ISO9001:2015 Certified | ISO13485:2016 Certified
+          </p>
+          <ul>
+            <li>Contact</li>
+            <li>Privacy Policy</li>
+            <li>Terms of Use</li>
+            <li>Cancellation & Refund Policy</li>
+          </ul>
+        </div>
+      </footer>
+
+</body>
+</html>

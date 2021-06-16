@@ -1,0 +1,446 @@
+:root{
+  --btn-primary: blue;
+  --btn-secondary: red;
+  --transition-default: all 500ms;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  background-color: #343a40;
+  width: 100%;
+  color: #fff;
+  padding: 0.5em 2em;
+  gap: 1em;
+}
+
+nav .humburger{
+  display: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff
+}
+
+nav .nav-bar li{
+  list-style: none;
+}
+
+nav ul li:hover{
+  background-color: #58626d;
+}
+
+
+nav .nav-bar{
+  display: flex;
+  justify-content: space-around;
+  transition: all 500ms ease-in-out;
+}
+
+/* nav about */
+nav .about {
+  position: relative;
+}
+
+nav .about p{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+nav .about p i{
+  padding: 0.2em;
+}
+
+nav .about ul{
+  position: absolute;
+  transform: translateY(5%);
+  left: 0;
+  width: 35ch;
+  border-radius: 5px;
+  padding: 1.5em 1em;
+  background-color: #343a40;
+  opacity: 0;
+  transition: var(--transition-default);
+  visibility: hidden;
+}
+
+nav .about ul li{
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+nav .about ul.show{
+  visibility: visible;
+  opacity: 1;
+}
+
+/* nav research-clinic */
+nav .research-clinic{
+  position: relative;
+}
+
+nav .research-clinic p{
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+}
+
+nav .research-clinic p i{
+  padding: 0.2em;
+}
+
+nav .research-clinic ul li{
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+nav .research-clinic ul{
+  position: absolute;
+  transform: translateY(5%);
+  left: 0;
+  width: 35ch;
+  border-radius: 5px;
+  padding: 1em;
+  background-color: #343a40;
+  opacity: 0;
+  transition: var(--transition-default);
+  visibility: hidden;
+}
+
+nav .research-clinic ul.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-bar > div{
+  padding: 0.5em 1em;
+}
+
+
+/*nav  products-services */
+nav .products-services {
+  position: relative;
+}
+
+nav .products-services p{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+nav .products-services p i{
+  padding: 0.2em;
+}
+
+nav .products-services ul li{
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+nav .products-services ul{
+  position: absolute;
+  transform: translateY(5%);
+  left: 0;
+  width: 35ch;
+  border-radius: 5px;
+  padding: 1em;
+  background-color: #343a40;
+  opacity: 0;
+  transition: var(--transition-default);
+  visibility: hidden;
+}
+
+nav .products-services ul.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Main */
+main{
+  background-image: url(./assests/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: blue;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+
+main .main-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 3em;
+  color: white;
+}
+
+main .main-header button{
+  cursor: pointer;
+}
+
+main .appointment{
+  padding: 2em 3em;
+  background-color: white;
+}
+
+main .appointment .buttons{
+  position: relative;
+  display: flex;
+  gap: 0.5em;
+  padding: 2em 3em;
+}
+
+main .appointment .buttons i{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: blue;
+  font-size: 1.5em;
+}
+
+main .appointment-form{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
+}
+
+main .appointment-form > div{
+  display: flex;
+  flex-direction: column;
+  width: 25ch;
+}
+
+main .appointment-form button:hover{
+  cursor: pointer;
+}
+
+
+main .appointment-form #appointment-date{
+  padding: 1em;
+}
+
+main .appointment-form #person{
+  padding: 1em;
+}
+
+main .appointment-form .person{
+  position: relative;
+}
+
+
+main .appointment-form .person-dropdown{
+  position: absolute;
+  top: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 100%;
+  gap: 0.5em;
+  background-color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--transition-default);
+}
+
+main .appointment-form .person-dropdown.open{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+main .appointment-form .person .dropdown-btn{
+  border: none;
+  width: 30px;
+  height: 30px;
+  padding: 0.4em;
+  border-radius: 15px;
+  font-size: 1em;
+  text-align: center;
+  transition: all 250ms ease-in-out;
+}
+
+main .appointment-form .person .dropdown-btn:hover{
+  background-color: blue;
+  color: white;
+}
+
+
+main .appointment-form .person-dropdown .adults{
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+main .appointment-form .person-dropdown .adults p{
+  margin-right: auto;
+}
+
+main .appointment-form .person-dropdown .children p{
+  margin-right: auto;
+}
+
+
+main .appointment-form .person-dropdown .children{
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+
+main .appointment-form #collection{
+  padding: 1em;
+}
+
+main .text {
+  margin-top: 3em;
+  padding: 1em 2em;
+  background-color: white;
+  color: black;
+}
+
+.collection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 2em;
+}
+
+.collection h2{
+  padding: 1em 2em;
+}
+
+
+.collection .collection-container{
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+.collection .collection-container .item{
+  display: block;
+  width: 300px;
+  padding: 0.5em 1em;
+  margin: 1em;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0,0,0,.08);
+}
+
+.collection .collection-container .item h5{
+  padding: 0.5em 0;
+  border-bottom: 1px solid #ddd
+}
+
+.collection .collection-container .item div{
+  text-align: center;
+  padding-top: 0.5em;
+}
+
+.collection .collection-container .item p{
+  padding: 0.5em;
+}
+
+.collection .collection-container .item button{
+  text-align: center;
+  padding: 1em;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--btn-primary);
+  cursor: pointer;
+}
+
+
+/* footer */
+footer{
+  background-color: #343a40;
+  color: white;
+}
+
+footer h3{
+  text-align: center;
+  padding: 0.5em 1em;
+}
+
+footer p{
+  padding: 0.5em 1em;
+  width: 100%;
+}
+
+footer div{
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+footer ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+footer ul li{
+  position: relative;
+  list-style: none;
+  cursor: pointer;
+}
+
+footer ul li::before{
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: blue;
+  transform: scale(0);
+  transition: all 250ms ease-in-out;
+}
+
+footer ul li:hover::before{
+  transform: scale(1);
+}
+
+/* custom */
+.btn-primary{
+  background-color: var(--btn-primary);
+  color: white;
+  padding: 1em 1.5em;
+  border-radius: 5px;
+}
+
+.btn-secondary{
+  background-color: var(--btn-secondary);
+  color: white;
+  padding: 1em 1.5em;
+  border-radius: 5px;
+}
+
+.btn-default{
+  position: relative;
+  padding: 1em 1.5em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tab-selected{
+  border: 3px solid blue;
+}
+
+
